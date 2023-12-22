@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Text Summarizer</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Policy Dash</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".txt">
+            <input type="button" value="Execute" id="uploadButton">
+        </form>
+        <div id="loading" class="loader" style="display: none;"></div>
+        <p>Output</p>
+        <div id="summaryOutput"></div>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts/scripts.js') }}"></script>
+</body>
+</html>
